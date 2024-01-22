@@ -54,9 +54,13 @@ class _DiceRollerState extends State<DiceRoller> with SingleTickerProviderStateM
         SizedBox(height: 20),
         RotationTransition(
           turns: _animation,
-          child: Image.asset(
-            'images/dice-$currentDiceRoll.png',
-            width: 200,
+          child: Transform(
+            alignment: Alignment.center,
+            transform: Matrix4.identity()..rotateX(0),
+            child: Image.asset(
+              'images/dice-$currentDiceRoll.png',
+              width: 200,
+            ),
           ),
         ),
         const SizedBox(height: 20),
@@ -87,14 +91,13 @@ class _DiceRollerState extends State<DiceRoller> with SingleTickerProviderStateM
             ),
             SizedBox(width: 20),
             FloatingActionButton(
-              onPressed:restart ,
-              backgroundColor: Color.fromARGB(179, 238, 110, 143),
-              child: Icon(Icons.restart_alt)
-              )
+                onPressed:restart ,
+                backgroundColor: Color.fromARGB(179, 238, 110, 143),
+                child: Icon(Icons.restart_alt)
+            )
           ],
         )
       ],
     );
   }
 }
-
