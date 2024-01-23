@@ -19,5 +19,10 @@ jobs:
         working-directory: C:\Users\Admin\StudioProjects\dice
         run: flutter pub get
 
+      - name: List files in project directory
+        run: |
+            echo "Listing files in project directory"
+            ls -R
+
       - name: Run tests
         run: flutter test
