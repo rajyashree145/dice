@@ -48,7 +48,7 @@ class _DiceRollerState extends State<DiceRoller> with SingleTickerProviderStateM
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('Dice App ',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 50),),
+        Text('Dice App',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 50),),
         SizedBox(height: 150,),
         Text('Total Points : $pnts',style: TextStyle(fontSize: 25),),
         SizedBox(height: 20),
